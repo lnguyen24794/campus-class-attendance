@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Enums\UserRole;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\V1\Admin\IndexAdminListRequest;
-use App\Http\Requests\Api\V1\Admin\StoreMasterUserRequest;
-use App\Http\Requests\Api\V1\Admin\UpdateMasterUserRequest;
+use App\Http\Requests\Api\V1\Students\IndexStudentRequest;
+use App\Http\Requests\Api\V1\Students\StoreStudentRequest;
+use App\Http\Requests\Api\V1\Students\UpdateStudentRequest;
 use App\Http\Resources\Api\V1\Users\UserResource;
 use App\Http\Resources\Api\V1\Users\UserResourceForList;
 use App\Http\Response\ApiResponse;
@@ -24,7 +24,7 @@ class StudentController extends Controller
     /**
      * List students for admin CRUD (?q=&page=&limit=).
      */
-    public function index(IndexAdminListRequest $request): JsonResponse
+    public function index(IndexStudentRequest $request): JsonResponse
     {
         $paginator = $this->masterUserService->fetchUserList(
             UserRole::Student,
@@ -40,7 +40,7 @@ class StudentController extends Controller
     /**
      * Create a student.
      */
-    public function store(StoreMasterUserRequest $request): JsonResponse
+    public function store(StoreStudentRequest $request): JsonResponse
     {
         $student = $this->masterUserService->createUser(UserRole::Student, $request->validated());
 
@@ -60,7 +60,7 @@ class StudentController extends Controller
     /**
      * Update a student.
      */
-    public function update(UpdateMasterUserRequest $request, User $student): JsonResponse
+    public function update(UpdateStudentRequest $request, User $student): JsonResponse
     {
         abort_unless($student->isStudent(), 404);
 

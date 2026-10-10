@@ -5,7 +5,7 @@ Theo `imatomi_na-admin.wiki/home.md` + mẫu `ApiResponse` / Base Request / Reso
 - Controller: mỏng; `validated()` → Service; list = `ResourceForList`; create = `ApiResponse::created(Resource)`
 - Service: `{Noun}Service`; `fetch*` / `create*`; nhận `User` + `array $params`
 - Repository: `{Noun}Repository`; `find` / `search` / `insert`
-- Request: `CommonRules` (type/unique/exists) + API Request chỉ `REQUIRED`/`NULLABLE` qua `mergeCommonRules()`
+- Request: folder theo module (`Api/V1/Students|Lecturers|Subjects|Periods/…`); type/unique/exists trong `Common\{Module}Rules` + `moduleCommonRules()`; API Request chỉ `REQUIRED`/`NULLABLE` qua `mergeCommonRules()`
 - Resource: `{Noun}Resource` (số ít) · `{Noun}ResourceForList` (số nhiều)
 - POST create → **201**
 - Method public → PHPDoc tiếng Anh

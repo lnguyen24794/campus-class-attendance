@@ -69,8 +69,8 @@ Yêu cầu HTTP
 
 ## Form Request
 
-- Rule type/format/unique/exists: `app/Http/Requests/Common/CommonRules.php`
-- API Request chỉ khai báo `REQUIRED` / `NULLABLE` + `mergeCommonRules()`
+- Rule type/format/unique/exists: `app/Http/Requests/Common/{Module}Rules.php` (theo module)
+- FormRequest API: folder `Api/V1/{Module}/` — chỉ `REQUIRED` / `NULLABLE` + `moduleCommonRules()` + `mergeCommonRules()`
 - Chi tiết: [Class Request](Class-Request)
 
 ## Ngày giờ

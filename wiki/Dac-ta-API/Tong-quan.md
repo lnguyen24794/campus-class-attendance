@@ -50,7 +50,7 @@ Route::middleware(['web', 'auth', 'role:admin,lecturer'])->prefix('admin')->grou
 
 ## FormRequest
 
-Mọi body/query API dùng `mergeCommonRules()` — type/unique nằm ở `CommonRules`. Xem [Class Request](../Quy-tac-du-an/Coding/Backend/Class-Request).
+Mọi body/query API dùng `mergeCommonRules()` — type/unique nằm ở `Common\{Module}Rules` + `moduleCommonRules()`. Xem [Class Request](../Quy-tac-du-an/Coding/Backend/Class-Request).
 
 ## Thông báo
 

@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\Common\ListRules;
+
 abstract class BaseListRequest extends BaseRequest
 {
     /**
@@ -18,7 +20,7 @@ abstract class BaseListRequest extends BaseRequest
     /**
      * Drop empty query values, then normalize keys to snake_case.
      *
-     * Common field rules (including `limit`) come from CommonRules via BaseRequest.
+     * List field rules come from ListRules via moduleCommonRules().
      */
     protected function prepareForValidation(): void
     {
@@ -31,5 +33,47 @@ abstract class BaseListRequest extends BaseRequest
         }
 
         $this->replace($this->convertKeysToSnakeCase($validationData));
+    }
+
+    /**
+     * @return array<string, list<mixed>>
+     */
+    protected function moduleCommonRules(): array
+    {
+        return ListRules::definitions();
+    }
+
+    /**
+     * Presence rules shared by admin index endpoints (?q=&page=&limit=).
+     *
+     * @return array<string, list<mixed>>
+     */
+    protected function listPresenceRules(): array
+    {
+        return $this->mergeCommonRules([
+            'q' => [self::NULLABLE],
+            'page' => [self::NULLABLE],
+            'limit' => [self::NULLABLE],
+            'per_page' => [self::NULLABLE],
+        ]);
+    }
+
+    /**
+     * Normalized list filters for repositories/services.
+     *
+     * @return array{q: string, page: int, limit: int}
+     */
+    public function listFilters(int $defaultLimit = 10): array
+    {
+        $validated = $this->validated();
+
+        return [
+            'q' => trim((string) ($validated['q'] ?? '')),
+            'page' => max(1, (int) ($validated['page'] ?? 1)),
+            'limit' => max(1, min(
+                (int) ($validated['limit'] ?? $validated['per_page'] ?? $defaultLimit),
+                100,
+            )),
+        ];
     }
 }

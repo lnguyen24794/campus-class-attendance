@@ -20,7 +20,7 @@ Bộ hướng dẫn dự án demo **điểm danh lớp học phần bằng mã Q
 | Seeder Khoa CNTT DUT | ✅ | `DutCnttSeeder` |
 | Reverb realtime | ✅ | Channel `attendance-sessions.{id}` |
 | Public QR (LAN/tunnel) | ✅ | `PUBLIC_APP_URL` — **không** hiện trên Live |
-| CommonRules FormRequest | ✅ | API Request chỉ `REQUIRED`/`NULLABLE` |
+| Module FormRequest | ✅ | Folder theo module; presence-only + `{Module}Rules` |
 
 ## Trước khi tạo PR / merge
 
@@ -65,7 +65,7 @@ php artisan test
 | [Controller](Quy-tac-du-an/Coding/Backend/Class-Controller) | API + Admin AJAX + Web Blade shell |
 | [Service](Quy-tac-du-an/Coding/Backend/Class-Service) | Logic nghiệp vụ |
 | [Repository](Quy-tac-du-an/Coding/Backend/Class-Repository) | Truy cập CSDL |
-| [Request](Quy-tac-du-an/Coding/Backend/Class-Request) | CommonRules + presence-only |
+| [Request](Quy-tac-du-an/Coding/Backend/Class-Request) | Module folders + `{Module}Rules` + presence-only |
 | [Resource](Quy-tac-du-an/Coding/Backend/Class-Resource) | `Resource` / `ResourceForList` |
 | [ApiResponse](Quy-tac-du-an/Coding/Backend/Class-ApiResponse) | Envelope JSON |
 | [PHPDoc](Quy-tac-du-an/Coding/Backend/PHPDoc) | Comment chuẩn |
@@ -99,7 +99,7 @@ Khi user yêu cầu **tạo lại** Lịch sử điểm danh / Điểm danh QR: 
 
 ```
 HTTP Request
-  → BaseListRequest | BaseRequest (+ CommonRules)
+  → BaseListRequest | BaseRequest (+ module *Rules)
   → Controller
        → list:   ResourceForList / items+meta
        → create: ApiResponse::created(Resource)
@@ -109,7 +109,7 @@ HTTP Request
 ```
 
 - Controller mỏng; truyền `$request->validated()`
-- FormRequest API **chỉ** `REQUIRED`/`NULLABLE` — type/unique ở `CommonRules`
+- FormRequest theo module (`Api/V1/{Module}/`); API **chỉ** `REQUIRED`/`NULLABLE` — type/unique ở `Common\{Module}Rules`
 - Service chỉ inject Repository; **không** gọi `Model::query()` trực tiếp (trừ admin dashboard đếm đơn giản đã tách API)
 - Đổi API → cập nhật wiki `Dac-ta-API/`
 

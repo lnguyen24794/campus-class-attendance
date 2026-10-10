@@ -59,7 +59,7 @@ Ghi `PUBLIC_APP_URL` vào `.env` — dùng khi generate QR (không phải dòng 
 
 ```
 HTTP
-  → BaseListRequest | BaseRequest (+ CommonRules)
+  → BaseListRequest | BaseRequest (+ module *Rules)
   → Controller (Api\V1\* | Web\*)
   → Service
   → Repository

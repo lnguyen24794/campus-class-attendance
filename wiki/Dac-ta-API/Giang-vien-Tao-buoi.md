@@ -21,7 +21,7 @@ POST /api/v1/lecturers/attendance-sessions
 | `late_after_minutes` | int | Không | 0–120; mặc định **15** |
 
 Presence: `StoreAttendanceSessionRequest` — chỉ `REQUIRED`/`NULLABLE`.  
-Type/exists: `CommonRules`.
+Type/exists: `AttendanceRules` (module).
 
 ## Response thành công `201`
 

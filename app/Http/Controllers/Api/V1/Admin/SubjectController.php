@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\V1\Admin\IndexAdminListRequest;
-use App\Http\Requests\Api\V1\Admin\StoreSubjectRequest;
-use App\Http\Requests\Api\V1\Admin\UpdateSubjectRequest;
+use App\Http\Requests\Api\V1\Subjects\IndexSubjectRequest;
+use App\Http\Requests\Api\V1\Subjects\StoreSubjectRequest;
+use App\Http\Requests\Api\V1\Subjects\UpdateSubjectRequest;
 use App\Http\Resources\Api\V1\Subjects\SubjectResource;
 use App\Http\Resources\Api\V1\Subjects\SubjectResourceForList;
 use App\Http\Response\ApiResponse;
@@ -23,7 +23,7 @@ class SubjectController extends Controller
     /**
      * List subjects for admin CRUD (?q=&page=&limit=).
      */
-    public function index(IndexAdminListRequest $request): JsonResponse
+    public function index(IndexSubjectRequest $request): JsonResponse
     {
         $paginator = $this->subjectService->fetchSubjectList($request->listFilters());
 

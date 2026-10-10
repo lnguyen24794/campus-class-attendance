@@ -54,7 +54,7 @@ Alias: `per_page` ≡ `limit`. Mặc định `limit=10`. UI options: **10 / 20 /
 }
 ```
 
-Request: `IndexAdminListRequest` (`q`, `page`, `limit`, `per_page`).
+Request: `Index{Student|Lecturer|Subject|Period}Request` (`q`, `page`, `limit`, `per_page`) — folder theo module.
 
 ### Create / Update / Delete
 
@@ -65,7 +65,7 @@ Request: `IndexAdminListRequest` (`q`, `page`, `limit`, `per_page`).
 | PUT/PATCH | `/admin/{resource}/{id}` | 200 |
 | DELETE | `/admin/{resource}/{id}` | 200 |
 
-Presence: `Store*` / `Update*` — chỉ `REQUIRED`/`NULLABLE`. Type/unique: `CommonRules`.
+Presence: `Store*` / `Update*` — chỉ `REQUIRED`/`NULLABLE`. Type/unique: `Common\{Module}Rules`.
 
 ---
 
@@ -174,7 +174,7 @@ POST /admin/attendance-sessions/{session}/refresh-qr
 | Layer | Class |
 |-------|--------|
 | Controllers | `Api\V1\Admin\*`, `AttendanceSessionAdminController`, `DashboardController` |
-| List requests | `IndexAdminListRequest`, `IndexAttendanceSessionRequest` |
+| List requests | `IndexStudentRequest`, `IndexLecturerRequest`, `IndexSubjectRequest`, `IndexPeriodRequest` (+ `IndexAttendanceSessionRequest` khi có UC) |
 | Services | `MasterUserService`, `SubjectService`, `PeriodService`, `AttendanceSessionService`, `PublicUrlService` |
 | Meta | `App\Support\PaginationMeta` |
 

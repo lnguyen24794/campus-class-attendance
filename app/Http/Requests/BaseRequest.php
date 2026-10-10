@@ -2,8 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Common\CommonRules;
-
 abstract class BaseRequest extends BaseFormRequest
 {
     public const ACCEPTED = 'accepted';
@@ -39,7 +37,7 @@ abstract class BaseRequest extends BaseFormRequest
     public const UUID = 'uuid';
 
     /**
-     * Shared validation rules keyed by field name (loaded from CommonRules).
+     * Module field rules keyed by field name (from module *Rules classes).
      *
      * @var array<string, list<mixed>>
      */
@@ -74,17 +72,30 @@ abstract class BaseRequest extends BaseFormRequest
     }
 
     /**
-     * Merge endpoint presence rules (REQUIRED / NULLABLE) with shared CommonRules.
+     * Type / format / unique / exists rules for this feature module.
+     *
+     * Override in each FormRequest (or a module base) and return the matching
+     * `App\Http\Requests\Common\{Module}Rules::definitions(...)`.
+     *
+     * @return array<string, list<mixed>>
+     */
+    protected function moduleCommonRules(): array
+    {
+        return [];
+    }
+
+    /**
+     * Merge endpoint presence rules (REQUIRED / NULLABLE) with module *Rules.
      *
      * API Request classes must only pass presence tokens per field; type / format /
-     * unique / exists live in CommonRules.
+     * unique / exists live in the module Rules class.
      *
      * @param  array<string, list<mixed>>  $rules
      * @return array<string, list<mixed>>
      */
     protected function mergeCommonRules(array $rules): array
     {
-        $this->setCommonRules();
+        $this->commonRules = $this->moduleCommonRules();
 
         $mergedRules = [];
 
@@ -120,7 +131,7 @@ abstract class BaseRequest extends BaseFormRequest
             if (! is_string($token) || ! in_array($token, $allowed, true)) {
                 throw new \InvalidArgumentException(
                     sprintf(
-                        'Field [%s] in %s must only declare REQUIRED, NULLABLE, or SOMETIMES. Move type/format/unique rules to CommonRules.',
+                        'Field [%s] in %s must only declare REQUIRED, NULLABLE, or SOMETIMES. Move type/format/unique rules to the module *Rules class.',
                         $field,
                         static::class,
                     ),
@@ -130,7 +141,7 @@ abstract class BaseRequest extends BaseFormRequest
     }
 
     /**
-     * Check whether a common rule exists for the field.
+     * Check whether a module rule exists for the field.
      */
     private function existsCommonRules(string $name): bool
     {
@@ -138,20 +149,12 @@ abstract class BaseRequest extends BaseFormRequest
     }
 
     /**
-     * Find common rules for the field.
+     * Find module rules for the field.
      *
      * @return list<mixed>
      */
     private function findCommonRules(string $name): array
     {
         return $this->commonRules[$name] ?? [];
-    }
-
-    /**
-     * Load shared CCA field rules from CommonRules.
-     */
-    protected function setCommonRules(): void
-    {
-        $this->commonRules = CommonRules::definitions($this);
     }
 }

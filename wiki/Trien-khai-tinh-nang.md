@@ -7,7 +7,7 @@
 | Giai đoạn | Việc chính |
 |-----------|------------|
 | 1. Phân tích | Đọc UC / MSG / quy tắc nghiệp vụ; liệt kê câu hỏi còn mơ hồ |
-| 2. Thiết kế | Impact: API, Service, Repository, migration, CommonRules, message, UI AJAX |
+| 2. Thiết kế | Impact: API, Service, Repository, migration, module *Rules, message, UI AJAX |
 | 3. Implement | Code theo kiến trúc tầng + Feature/Unit test |
 | 4. Kiểm tra | `pint` + `php artisan test` + checklist DoD + cập nhật wiki |
 
@@ -29,7 +29,7 @@
 Checklist impact:
 
 - [ ] Endpoint mới / đổi contract? → cập nhật `Dac-ta-API/`
-- [ ] Field mới → thêm `CommonRules` trước, API Request chỉ `REQUIRED`/`NULLABLE`
+- [ ] Field mới → thêm đúng `Common\{Module}Rules` trước; API Request trong folder module, chỉ `REQUIRED`/`NULLABLE`
 - [ ] Form Request + Resource?
 - [ ] Service / Repository method nào?
 - [ ] Migration / enum / message mới?
@@ -42,9 +42,9 @@ Checklist impact:
 Thứ tự gợi ý:
 
 1. Migration / Model / Enum (nếu có)
-2. `CommonRules` (field type/unique)
+2. `Common\{Module}Rules` (field type/unique theo module)
 3. Repository → Service
-4. Request (presence-only) + Resource + Controller + route
+4. Request trong `Api/V1/{Module}/` (presence-only + `moduleCommonRules()`) + Resource + Controller + route
 5. (Tuỳ) Blade shell + `resources/js/pages/*`
 6. Feature test
 
@@ -66,7 +66,7 @@ php artisan test
 
 - [ ] UC / MSG đã map đủ (nếu nghiệp vụ điểm danh)
 - [ ] API wiki `Dac-ta-API/` đã cập nhật
-- [ ] Field mới có trong `CommonRules`; API Request không lặp type
+- [ ] Field mới có trong đúng `{Module}Rules`; API Request không lặp type; không gom Request vào một folder chung
 - [ ] Test liên quan pass
 - [ ] Không lộ field nhạy cảm trong Resource
 - [ ] Role middleware đúng

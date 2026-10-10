@@ -13,7 +13,7 @@ Bộ wiki tiếng Việt cho demo **điểm danh lớp học phần bằng QR**.
 - Duration prefill theo tiết (`starts_at`/`ends_at`) hoặc 45’
 - Admin CRUD + search collapse + pagination 10/20/50 (admin-frontend)
 - PostgreSQL + Docker + `bootstrap.sh` + DutCnttSeeder
-- CommonRules FormRequest
+- Module FormRequest (`Api/V1/{Module}/` + `Common\{Module}Rules`)
 
 ## Recreate / AI
 

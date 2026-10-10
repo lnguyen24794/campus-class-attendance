@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\V1\Admin\IndexAdminListRequest;
-use App\Http\Requests\Api\V1\Admin\StorePeriodRequest;
-use App\Http\Requests\Api\V1\Admin\UpdatePeriodRequest;
+use App\Http\Requests\Api\V1\Periods\IndexPeriodRequest;
+use App\Http\Requests\Api\V1\Periods\StorePeriodRequest;
+use App\Http\Requests\Api\V1\Periods\UpdatePeriodRequest;
 use App\Http\Resources\Api\V1\Periods\PeriodResource;
 use App\Http\Resources\Api\V1\Periods\PeriodResourceForList;
 use App\Http\Response\ApiResponse;
@@ -23,7 +23,7 @@ class PeriodController extends Controller
     /**
      * List periods for admin CRUD (?q=&page=&limit=).
      */
-    public function index(IndexAdminListRequest $request): JsonResponse
+    public function index(IndexPeriodRequest $request): JsonResponse
     {
         $paginator = $this->periodService->fetchPeriodList($request->listFilters());
 
