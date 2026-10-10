@@ -1,0 +1,222 @@
+@import 'tailwindcss';
+@plugin "flowbite/plugin";
+
+/* Light by default — dark:* only when .dark is set (not OS prefers-color-scheme). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../../resources/views/**/*.blade.php';
+@source '../../node_modules/flowbite';
+
+/*
+ | Tokens aligned with admin-frontend (HT Plus):
+ | styles/common/colors.scss + styles/variables.scss
+ */
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+
+    /* Slate as gray (admin-frontend $gray) */
+    --color-gray-50: #f8fafc;
+    --color-gray-100: #f1f5f9;
+    --color-gray-200: #e2e8f0;
+    --color-gray-300: #cbd5e1;
+    --color-gray-400: #94a3b8;
+    --color-gray-500: #64748b;
+    --color-gray-600: #475569;
+    --color-gray-700: #334155;
+    --color-gray-800: #1e293b;
+    --color-gray-900: #0f172a;
+
+    --color-accent: #f59e0b;
+    --color-accent-bold: #d97706;
+}
+
+@layer base {
+    html {
+        color-scheme: light;
+    }
+
+    body {
+        @apply bg-gray-50 font-sans text-sm text-gray-700 antialiased;
+    }
+}
+
+@layer components {
+    .ht-card {
+        @apply rounded-lg border border-gray-200 bg-white shadow-sm;
+    }
+
+    .ht-page {
+        @apply space-y-4 p-4 sm:p-5;
+    }
+
+    /* Pagination — admin-frontend cost-item-pagination / Vuetify data footer */
+    .ht-pagination {
+        @apply flex flex-wrap items-center justify-end gap-4 py-1 text-xs;
+    }
+
+    .ht-pagination-per-page {
+        @apply flex items-center gap-2;
+    }
+
+    .ht-pagination-label {
+        @apply whitespace-nowrap text-xs text-gray-500;
+    }
+
+    .ht-pagination-select {
+        @apply h-8 min-w-[4.5rem] rounded border border-gray-300 bg-white px-2 text-xs text-gray-700 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-300;
+    }
+
+    .ht-pagination-range {
+        @apply whitespace-nowrap text-xs text-gray-500;
+    }
+
+    .ht-pagination-nav {
+        @apply flex items-center;
+    }
+
+    .ht-page-btn {
+        @apply inline-flex h-8 w-8 items-center justify-center rounded text-gray-600 transition hover:bg-gray-100 hover:text-gray-900 disabled:cursor-not-allowed disabled:text-gray-300 disabled:hover:bg-transparent;
+    }
+
+    .ht-page-title {
+        @apply text-xl font-semibold text-gray-800 sm:text-2xl;
+    }
+
+    .ht-btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded bg-primary-600 px-4 py-2 text-sm font-medium text-white shadow-none transition hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-300;
+    }
+
+    .ht-btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200;
+    }
+
+    .ht-btn-ghost {
+        @apply inline-flex items-center justify-center gap-2 rounded border border-gray-200 bg-white px-3.5 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-800;
+    }
+
+    .ht-link {
+        @apply inline-flex items-center gap-1 text-sm font-medium text-primary-600 hover:text-primary-700 hover:underline;
+    }
+
+    .ht-link-danger {
+        @apply inline-flex items-center gap-1 text-sm font-medium text-red-600 hover:text-red-700 hover:underline;
+    }
+
+    /*
+     | List row actions — admin-frontend projects List.vue
+     | (.project-table__action-btn): gray default → primary/red on hover
+     */
+    .ht-actions {
+        @apply flex min-w-[200px] flex-nowrap items-center gap-2;
+    }
+
+    .ht-action-btn {
+        @apply inline-flex flex-nowrap items-center gap-1 px-1 py-0.5 text-sm font-medium text-gray-700 transition-colors duration-150;
+    }
+
+    .ht-action-btn:hover {
+        @apply text-primary-600;
+    }
+
+    .ht-action-btn-danger {
+        @apply inline-flex flex-nowrap items-center gap-1 px-1 py-0.5 text-sm font-medium text-gray-700 transition-colors duration-150;
+    }
+
+    .ht-action-btn-danger:hover {
+        @apply text-red-600;
+        filter: brightness(0.95);
+    }
+
+    .ht-action-btn:disabled,
+    .ht-action-btn-danger:disabled {
+        @apply cursor-not-allowed text-gray-400;
+    }
+
+    .ht-action-btn:disabled:hover,
+    .ht-action-btn-danger:disabled:hover {
+        @apply text-gray-400;
+        filter: none;
+    }
+
+    /* Outlined status chip — v-chip variant="outlined" success */
+    .ht-chip-success {
+        @apply inline-flex items-center rounded-full border border-green-500 bg-white px-2.5 py-0.5 text-xs font-medium text-green-600;
+    }
+
+    .ht-chip-warning {
+        @apply inline-flex items-center rounded-full border border-amber-500 bg-white px-2.5 py-0.5 text-xs font-medium text-amber-600;
+    }
+
+    .ht-chip-muted {
+        @apply inline-flex items-center rounded-full border border-gray-300 bg-white px-2.5 py-0.5 text-xs font-medium text-gray-600;
+    }
+
+    .ht-chip-primary {
+        @apply inline-flex items-center rounded-full border border-primary-500 bg-white px-2.5 py-0.5 text-xs font-medium text-primary-600;
+    }
+
+    .ht-input {
+        @apply block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-800 placeholder:text-gray-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-100;
+    }
+
+    .ht-label {
+        @apply mb-1.5 block text-sm font-medium text-gray-700;
+    }
+
+    .ht-table thead {
+        @apply bg-gray-100;
+    }
+
+    .ht-table thead th {
+        @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-600;
+    }
+
+    .ht-table tbody td {
+        @apply border-t border-gray-200 px-4 py-3 text-sm text-gray-700;
+    }
+
+    .ht-table tbody tr:hover {
+        @apply bg-gray-50;
+    }
+
+    .ht-badge-primary {
+        @apply inline-flex items-center rounded-full border border-primary-500 bg-white px-2.5 py-0.5 text-xs font-medium text-primary-600;
+    }
+
+    .ht-badge-success {
+        @apply inline-flex items-center rounded-full border border-green-500 bg-white px-2.5 py-0.5 text-xs font-medium text-green-600;
+    }
+
+    .ht-badge-warning {
+        @apply inline-flex items-center rounded-full border border-amber-500 bg-white px-2.5 py-0.5 text-xs font-medium text-amber-600;
+    }
+
+    .ht-badge-muted {
+        @apply inline-flex items-center rounded-full border border-gray-300 bg-white px-2.5 py-0.5 text-xs font-medium text-gray-600;
+    }
+
+    .ht-nav-item {
+        @apply flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50;
+    }
+
+    .ht-nav-item-active {
+        @apply bg-primary-50 text-primary-600;
+    }
+
+    .ht-nav-item-active svg {
+        @apply text-primary-600;
+    }
+}
