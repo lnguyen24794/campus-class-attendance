@@ -59,7 +59,8 @@ Tuân thủ:
 
 ```bash
 vendor/bin/pint
-php artisan test
+composer test
+composer coverage
 ```
 
 ### Definition of Done (DoD)
@@ -67,7 +68,7 @@ php artisan test
 - [ ] UC / MSG đã map đủ (nếu nghiệp vụ điểm danh)
 - [ ] API wiki `Dac-ta-API/` đã cập nhật
 - [ ] Field mới có trong đúng `{Module}Rules`; API Request không lặp type; không gom Request vào một folder chung
-- [ ] Test liên quan pass
+- [ ] Test liên quan pass; `composer coverage` = **100%**; `docs/coverage/SUMMARY.md` đã cập nhật
 - [ ] Không lộ field nhạy cảm trong Resource
 - [ ] Role middleware đúng
 - [ ] (UI) AJAX gọi đúng endpoint; CSRF/session OK

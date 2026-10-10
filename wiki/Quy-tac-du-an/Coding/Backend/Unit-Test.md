@@ -2,61 +2,82 @@
 
 ## Quy tắc chung
 
-- Public method quan trọng của **Service** / **Repository** nên có test
-- **Controller** test qua API endpoint (Feature test)
+- **Coverage `app/` = 100%** (lines + methods) — bắt buộc trước khi kết thúc task / merge
+- Public method **Service** / **Repository** / **Support** / **Rules** phải có Unit test
+- **Controller** test qua API / Web endpoint (Feature test)
 - Case độc lập — không phụ thuộc thứ tự chạy
-- Không merge khi test fail
+- Không merge khi test fail hoặc coverage < 100%
 - So sánh giá trị: ưu tiên `assertSame` (`===`); nếu dùng `assertEquals` thì ghi chú lý do
 
 ## Cấu trúc
 
 ```
 tests/
-├── Feature/Api/
-│   ├── StudentAttendanceControllerTest.php      # UC01
-│   └── AttendanceCheckInControllerTest.php      # UC02
+├── Feature/
+│   ├── Api/                 # Admin CRUD + dashboard
+│   ├── Web/                 # Auth + Blade shells
+│   └── Http/                # Middleware
 └── Unit/
-    └── ...
+    ├── Services/
+    ├── Repositories/
+    ├── Models/
+    ├── Enums/
+    ├── Http/                # ApiResponse, Requests, Resources
+    ├── Support/
+    └── Providers/
 ```
 
 - Feature: khớp routing / HTTP
 - Unit: gọi trực tiếp class method
-- Tên method gợi ý: `test_{TargetMethod}_{Description}` hoặc kiểu PHPUnit attribute hiện đại tương đương
+- Tên method: `test_{TargetMethod}_{Description}`
 
 ## Trọng tâm theo tầng
 
 ### Repository
 - Input → query/ghi DB đúng → output đúng
-- Cover nhánh `where` / filter
+- Cover nhánh `where` / filter (`q` rỗng vs có giá trị)
 
 ### Service
-- Input → nhánh nghiệp vụ (QR hết hạn, chưa enroll, đã điểm danh…) → kết quả / exception đúng
+- Input → nhánh nghiệp vụ (default field, role mismatch…) → kết quả / exception đúng
 
 ### Controller (Feature / API)
-- Có auth: thiếu auth → `401`
+- Thiếu auth → `401`
 - Sai role → `403`
-- Data hợp lệ → `2xx`
+- Data hợp lệ → `2xx` / `201`
 - Validation sai → `422`
-- Business rule (MSG-01…04) → status + `code` đúng
+- Sai loại resource (vd. lecturer id trên route student) → `404`
 
-## Chạy test demo seminar
+### FormRequest
+- Presence-only + `moduleCommonRules()`
+- `BaseListRequest::listFilters()` / strip empty query
+- `BaseFormRequest` casts (kể cả nhánh lỗi)
+
+## Chạy test & coverage
 
 ```bash
-php artisan test
-
-# UC01
-php artisan test --filter=StudentAttendanceControllerTest
-
-# UC02
-php artisan test --filter=AttendanceCheckInControllerTest
+composer test
+composer coverage
 ```
 
-## Checklist case nghiệp vụ (UC02)
+`composer coverage` ghi:
 
-| Case | Kỳ vọng |
-|------|---------|
-| QR hết hạn | MSG-01 |
-| Không thuộc lớp | MSG-02 |
-| Đã điểm danh | MSG-03 |
-| Buổi chưa mở / đã đóng | MSG-04 |
-| Thành công đúng giờ / muộn | MSG-05 + status |
+| File | Mục đích |
+|------|----------|
+| `docs/coverage/SUMMARY.md` | Tóm tắt % (agent cập nhật mỗi prompt khi đụng code/test) |
+| `docs/coverage/coverage.txt` | Báo cáo text PHPUnit |
+| `docs/coverage/clover.xml` | Clover XML |
+| `docs/coverage/html/` | HTML local (gitignored) |
+
+**Xem HTML:** [http://localhost:8000/coverage](http://localhost:8000/coverage) · `composer coverage:open`  
+Hướng dẫn: [Generate Code Coverage in Laravel With PCOV](https://laravel-news.com/generate-code-coverage-in-laravel-with-pcov)
+
+Cần **pcov** hoặc **xdebug**. macOS: `brew install shivammathur/extensions/pcov@8.4`. Hoặc đặt `pcov.so` tại `.php/pcov.so` (gitignored).
+
+Cursor rule: `.cursor/rules/cca-test-coverage.mdc` (**alwaysApply**) — mỗi prompt đụng `app/`|`tests/` phải chạy lại coverage và cập nhật file report.
+
+## Checklist DoD
+
+- [ ] Unit/Feature cover đủ nhánh code mới
+- [ ] `composer test` pass
+- [ ] `composer coverage` → **100%** lines + methods
+- [ ] `docs/coverage/SUMMARY.md` đã cập nhật

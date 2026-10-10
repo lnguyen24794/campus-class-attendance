@@ -1,0 +1,120 @@
+
+
+Code Coverage Report:
+  2026-10-10 04:47:11
+
+ Summary:
+  Classes: 100.00% (55/55)
+  Methods: 100.00% (156/156)
+  Lines:   100.00% (574/574)
+
+App\Enums\AttendanceStatus
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  4/  4)
+App\Enums\SessionStatus
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  4/  4)
+App\Http\Controllers\Api\V1\Admin\DashboardController
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  9/  9)
+App\Http\Controllers\Api\V1\Admin\LecturerController
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 19/ 19)
+App\Http\Controllers\Api\V1\Admin\PeriodController
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 13/ 13)
+App\Http\Controllers\Api\V1\Admin\StudentController
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 19/ 19)
+App\Http\Controllers\Api\V1\Admin\SubjectController
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 13/ 13)
+App\Http\Controllers\Web\AuthController
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% ( 15/ 15)
+App\Http\Controllers\Web\DashboardController
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
+App\Http\Middleware\EnsureUserRole
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 14/ 14)
+App\Http\Requests\Api\V1\Lecturers\IndexLecturerRequest
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
+App\Http\Requests\Api\V1\Lecturers\StoreLecturerRequest
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+App\Http\Requests\Api\V1\Lecturers\UpdateLecturerRequest
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+App\Http\Requests\Api\V1\Periods\IndexPeriodRequest
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
+App\Http\Requests\Api\V1\Periods\StorePeriodRequest
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+App\Http\Requests\Api\V1\Periods\UpdatePeriodRequest
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+App\Http\Requests\Api\V1\Students\IndexStudentRequest
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
+App\Http\Requests\Api\V1\Students\StoreStudentRequest
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+App\Http\Requests\Api\V1\Students\UpdateStudentRequest
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+App\Http\Requests\Api\V1\Subjects\IndexSubjectRequest
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
+App\Http\Requests\Api\V1\Subjects\StoreSubjectRequest
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+App\Http\Requests\Api\V1\Subjects\UpdateSubjectRequest
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+App\Http\Requests\BaseFormRequest
+  Methods: 100.00% ( 8/ 8)   Lines: 100.00% ( 52/ 52)
+App\Http\Requests\BaseListRequest
+  Methods: 100.00% ( 4/ 4)   Lines: 100.00% ( 21/ 21)
+App\Http\Requests\BaseRequest
+  Methods: 100.00% ( 7/ 7)   Lines: 100.00% ( 31/ 31)
+App\Http\Requests\Common\AttendanceRules
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  9/  9)
+App\Http\Requests\Common\ListRules
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  7/  7)
+App\Http\Requests\Common\PeriodRules
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 12/ 12)
+App\Http\Requests\Common\SubjectRules
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 11/ 11)
+App\Http\Requests\Common\UserRules
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 17/ 17)
+App\Http\Resources\Api\V1\Periods\PeriodResource
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  8/  8)
+App\Http\Resources\Api\V1\Periods\PeriodResourceForList
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  7/  7)
+App\Http\Resources\Api\V1\Subjects\SubjectResource
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  8/  8)
+App\Http\Resources\Api\V1\Subjects\SubjectResourceForList
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  7/  7)
+App\Http\Resources\Api\V1\Users\UserResource
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  8/  8)
+App\Http\Resources\Api\V1\Users\UserResourceForList
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  7/  7)
+App\Http\Response\ApiResponse
+  Methods: 100.00% ( 7/ 7)   Lines: 100.00% ( 15/ 15)
+App\Models\Attendance
+  Methods: 100.00% ( 4/ 4)   Lines: 100.00% (  7/  7)
+App\Models\AttendanceSession
+  Methods: 100.00% ( 7/ 7)   Lines: 100.00% ( 14/ 14)
+App\Models\CourseSection
+  Methods: 100.00% ( 4/ 4)   Lines: 100.00% (  4/  4)
+App\Models\Enrollment
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  2/  2)
+App\Models\Period
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
+App\Models\Subject
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  4/  4)
+App\Models\User
+  Methods: 100.00% ( 5/ 5)   Lines: 100.00% (  9/  9)
+App\Providers\AppServiceProvider
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  2/  2)
+App\Repositories\CourseSectionRepository
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  2/  2)
+App\Repositories\EnrollmentRepository
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  5/  5)
+App\Repositories\PeriodRepository
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 19/ 19)
+App\Repositories\SubjectRepository
+  Methods: 100.00% ( 5/ 5)   Lines: 100.00% ( 18/ 18)
+App\Repositories\UserRepository
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 26/ 26)
+App\Services\MasterUserService
+  Methods: 100.00% ( 5/ 5)   Lines: 100.00% ( 26/ 26)
+App\Services\PeriodService
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 16/ 16)
+App\Services\PublicUrlService
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  5/  5)
+App\Services\SubjectService
+  Methods: 100.00% ( 5/ 5)   Lines: 100.00% ( 15/ 15)
+App\Support\PaginationMeta
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  8/  8)

@@ -10,6 +10,7 @@ Theo `imatomi_na-admin.wiki/home.md` + mẫu `ApiResponse` / Base Request / Reso
 - POST create → **201**
 - Method public → PHPDoc tiếng Anh
 - Thời gian API: ISO 8601 (`toAtomString()`)
+- Test: Unit + Feature; **`composer coverage` = 100%** lines/methods trên `app/`; cập nhật `docs/coverage/` mỗi lần đụng code/test
 
 ## Luồng
 

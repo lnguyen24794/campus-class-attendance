@@ -21,6 +21,7 @@ Bộ hướng dẫn dự án demo **điểm danh lớp học phần bằng mã Q
 | Reverb realtime | ✅ | Channel `attendance-sessions.{id}` |
 | Public QR (LAN/tunnel) | ✅ | `PUBLIC_APP_URL` — **không** hiện trên Live |
 | Module FormRequest | ✅ | Folder theo module; presence-only + `{Module}Rules` |
+| Unit/Feature + coverage 100% | ✅ | `composer coverage` → `docs/coverage/` |
 
 ## Trước khi tạo PR / merge
 
@@ -79,6 +80,7 @@ php artisan test
 ### AI Agents (Cursor)
 - Rule luôn bật: `campus-class-attendance/.cursor/rules/cca-backend-architecture.mdc`
 - Rule FormRequest: `campus-class-attendance/.cursor/rules/laravel-form-request.mdc`
+- Rule coverage 100%: `campus-class-attendance/.cursor/rules/cca-test-coverage.mdc` (**alwaysApply** — cập nhật `docs/coverage/` mỗi prompt)
 - Rule QR / lịch sử: `campus-class-attendance/.cursor/rules/cca-qr-attendance.mdc` (**bắt buộc** khi recreate UC01/UC02)
 
 ### Recreate từ wiki

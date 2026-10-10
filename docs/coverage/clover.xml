@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1791607630">
+  <project timestamp="1791607630" name="Clover Coverage">
+    <package name="App\Enums">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Enums/AttendanceStatus.php">
+        <class name="App\Enums\AttendanceStatus" namespace="App\Enums">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="13" type="method" name="label" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <metrics loc="21" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Enums/SessionStatus.php">
+        <class name="App\Enums\SessionStatus" namespace="App\Enums">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="13" type="method" name="label" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <metrics loc="21" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Enums/UserRole.php">
+        <class name="App\Enums\UserRole" namespace="App\Enums">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Api\V1\Admin">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Controllers/Api/V1/Admin/DashboardController.php">
+        <class name="App\Http\Controllers\Api\V1\Admin\DashboardController" namespace="App\Http\Controllers\Api\V1\Admin">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
+        </class>
+        <line num="20" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <metrics loc="33" ncloc="28" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Controllers/Api/V1/Admin/LecturerController.php">
+        <class name="App\Http\Controllers\Api\V1\Admin\LecturerController" namespace="App\Http\Controllers\Api\V1\Admin">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="25" coveredelements="25"/>
+        </class>
+        <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="27" type="method" name="index" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="43" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="53" type="method" name="show" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="63" type="method" name="update" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="75" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="77" type="stmt" count="2"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <metrics loc="84" ncloc="69" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="25" coveredelements="25"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Controllers/Api/V1/Admin/PeriodController.php">
+        <class name="App\Http\Controllers\Api\V1\Admin\PeriodController" namespace="App\Http\Controllers\Api\V1\Admin">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="19" coveredelements="19"/>
+        </class>
+        <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="26" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="39" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="49" type="method" name="show" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="57" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="67" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <metrics loc="74" ncloc="59" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="19" coveredelements="19"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Controllers/Api/V1/Admin/StudentController.php">
+        <class name="App\Http\Controllers\Api\V1\Admin\StudentController" namespace="App\Http\Controllers\Api\V1\Admin">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="25" coveredelements="25"/>
+        </class>
+        <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="27" type="method" name="index" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="43" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="53" type="method" name="show" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="63" type="method" name="update" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="75" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="77" type="stmt" count="2"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <metrics loc="84" ncloc="69" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="25" coveredelements="25"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Controllers/Api/V1/Admin/SubjectController.php">
+        <class name="App\Http\Controllers\Api\V1\Admin\SubjectController" namespace="App\Http\Controllers\Api\V1\Admin">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="19" coveredelements="19"/>
+        </class>
+        <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="26" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="39" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="49" type="method" name="show" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="57" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="67" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <metrics loc="74" ncloc="59" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="19" coveredelements="19"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Controllers/Controller.php">
+        <class name="App\Http\Controllers\Controller" namespace="App\Http\Controllers">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="9" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Web">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Controllers/Web/AuthController.php">
+        <class name="App\Http\Controllers\Web\AuthController" namespace="App\Http\Controllers\Web">
+          <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="18" coveredelements="18"/>
+        </class>
+        <line num="16" type="method" name="create" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="24" type="method" name="store" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="45" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <metrics loc="54" ncloc="45" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="18" coveredelements="18"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Controllers/Web/DashboardController.php">
+        <class name="App\Http\Controllers\Web\DashboardController" namespace="App\Http\Controllers\Web">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="13" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <metrics loc="18" ncloc="15" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="App\Http\Middleware">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Middleware/EnsureUserRole.php">
+        <class name="App\Http\Middleware\EnsureUserRole" namespace="App\Http\Middleware">
+          <metrics complexity="7" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="15" coveredelements="15"/>
+        </class>
+        <line num="17" type="method" name="handle" visibility="public" complexity="7" crap="7" count="29"/>
+        <line num="19" type="stmt" count="29"/>
+        <line num="21" type="stmt" count="29"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="27"/>
+        <line num="30" type="stmt" count="27"/>
+        <line num="31" type="stmt" count="27"/>
+        <line num="32" type="stmt" count="27"/>
+        <line num="34" type="stmt" count="27"/>
+        <line num="35" type="stmt" count="7"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="20"/>
+        <metrics loc="45" ncloc="40" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="15" coveredelements="15"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Lecturers">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Lecturers/IndexLecturerRequest.php">
+        <class name="App\Http\Requests\Api\V1\Lecturers\IndexLecturerRequest" namespace="App\Http\Requests\Api\V1\Lecturers">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="15" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <metrics loc="20" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Lecturers/StoreLecturerRequest.php">
+        <class name="App\Http\Requests\Api\V1\Lecturers\StoreLecturerRequest" namespace="App\Http\Requests\Api\V1\Lecturers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="13" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <metrics loc="33" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Lecturers/UpdateLecturerRequest.php">
+        <class name="App\Http\Requests\Api\V1\Lecturers\UpdateLecturerRequest" namespace="App\Http\Requests\Api\V1\Lecturers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="13" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <metrics loc="33" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Periods">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Periods/IndexPeriodRequest.php">
+        <class name="App\Http\Requests\Api\V1\Periods\IndexPeriodRequest" namespace="App\Http\Requests\Api\V1\Periods">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="15" type="method" name="rules" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <metrics loc="20" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Periods/StorePeriodRequest.php">
+        <class name="App\Http\Requests\Api\V1\Periods\StorePeriodRequest" namespace="App\Http\Requests\Api\V1\Periods">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="13" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <metrics loc="33" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Periods/UpdatePeriodRequest.php">
+        <class name="App\Http\Requests\Api\V1\Periods\UpdatePeriodRequest" namespace="App\Http\Requests\Api\V1\Periods">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="13" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <metrics loc="33" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Students">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Students/IndexStudentRequest.php">
+        <class name="App\Http\Requests\Api\V1\Students\IndexStudentRequest" namespace="App\Http\Requests\Api\V1\Students">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="15" type="method" name="rules" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <metrics loc="20" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Students/StoreStudentRequest.php">
+        <class name="App\Http\Requests\Api\V1\Students\StoreStudentRequest" namespace="App\Http\Requests\Api\V1\Students">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="13" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <metrics loc="33" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Students/UpdateStudentRequest.php">
+        <class name="App\Http\Requests\Api\V1\Students\UpdateStudentRequest" namespace="App\Http\Requests\Api\V1\Students">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="13" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <metrics loc="33" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Subjects">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Subjects/IndexSubjectRequest.php">
+        <class name="App\Http\Requests\Api\V1\Subjects\IndexSubjectRequest" namespace="App\Http\Requests\Api\V1\Subjects">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="15" type="method" name="rules" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <metrics loc="20" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Subjects/StoreSubjectRequest.php">
+        <class name="App\Http\Requests\Api\V1\Subjects\StoreSubjectRequest" namespace="App\Http\Requests\Api\V1\Subjects">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="13" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <metrics loc="33" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Api/V1/Subjects/UpdateSubjectRequest.php">
+        <class name="App\Http\Requests\Api\V1\Subjects\UpdateSubjectRequest" namespace="App\Http\Requests\Api\V1\Subjects">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="13" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <metrics loc="33" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/BaseFormRequest.php">
+        <class name="App\Http\Requests\BaseFormRequest" namespace="App\Http\Requests">
+          <metrics complexity="31" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="52" elements="60" coveredelements="60"/>
+        </class>
+        <line num="21" type="method" name="prepareForValidation" visibility="protected" complexity="1" crap="1" count="13"/>
+        <line num="23" type="stmt" count="13"/>
+        <line num="24" type="stmt" count="13"/>
+        <line num="30" type="method" name="shaped" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="45" type="method" name="validated" visibility="public" complexity="3" crap="3" count="17"/>
+        <line num="47" type="stmt" count="17"/>
+        <line num="48" type="stmt" count="17"/>
+        <line num="50" type="stmt" count="17"/>
+        <line num="51" type="stmt" count="17"/>
+        <line num="52" type="stmt" count="17"/>
+        <line num="54" type="stmt" count="17"/>
+        <line num="55" type="stmt" count="13"/>
+        <line num="58" type="stmt" count="17"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="15"/>
+        <line num="68" type="method" name="castShaped" visibility="private" complexity="4" crap="4" count="3"/>
+        <line num="70" type="stmt" count="3"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="74" type="stmt" count="2"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="87" type="method" name="convertKeysToSnakeCase" visibility="protected" complexity="4" crap="4" count="21"/>
+        <line num="89" type="stmt" count="21"/>
+        <line num="91" type="stmt" count="21"/>
+        <line num="92" type="stmt" count="17"/>
+        <line num="93" type="stmt" count="17"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="17"/>
+        <line num="99" type="stmt" count="21"/>
+        <line num="108" type="method" name="castValidated" visibility="private" complexity="9" crap="9" count="15"/>
+        <line num="110" type="stmt" count="15"/>
+        <line num="112" type="stmt" count="15"/>
+        <line num="113" type="stmt" count="11"/>
+        <line num="114" type="stmt" count="3"/>
+        <line num="115" type="stmt" count="2"/>
+        <line num="116" type="stmt" count="1"/>
+        <line num="118" type="stmt" count="10"/>
+        <line num="119" type="stmt" count="1"/>
+        <line num="120" type="stmt" count="9"/>
+        <line num="123" type="stmt" count="11"/>
+        <line num="124" type="stmt" count="2"/>
+        <line num="125" type="stmt" count="11"/>
+        <line num="126" type="stmt" count="10"/>
+        <line num="128" type="stmt" count="5"/>
+        <line num="132" type="stmt" count="15"/>
+        <line num="140" type="method" name="cast" visibility="private" complexity="5" crap="5" count="11"/>
+        <line num="142" type="stmt" count="11"/>
+        <line num="143" type="stmt" count="10"/>
+        <line num="144" type="stmt" count="2"/>
+        <line num="145" type="stmt" count="3"/>
+        <line num="146" type="stmt" count="11"/>
+        <line num="147" type="stmt" count="11"/>
+        <line num="155" type="method" name="castBool" visibility="private" complexity="4" crap="4" count="3"/>
+        <line num="157" type="stmt" count="2"/>
+        <line num="158" type="stmt" count="3"/>
+        <line num="159" type="stmt" count="2"/>
+        <line num="160" type="stmt" count="3"/>
+        <line num="161" type="stmt" count="2"/>
+        <metrics loc="164" ncloc="120" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="52" elements="60" coveredelements="60"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/BaseListRequest.php">
+        <class name="App\Http\Requests\BaseListRequest" namespace="App\Http\Requests">
+          <metrics complexity="9" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="25" coveredelements="25"/>
+        </class>
+        <line num="25" type="method" name="prepareForValidation" visibility="protected" complexity="6" crap="6" count="10"/>
+        <line num="27" type="stmt" count="10"/>
+        <line num="29" type="stmt" count="10"/>
+        <line num="30" type="stmt" count="7"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="10"/>
+        <line num="41" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="10"/>
+        <line num="43" type="stmt" count="10"/>
+        <line num="51" type="method" name="listPresenceRules" visibility="protected" complexity="1" crap="1" count="10"/>
+        <line num="53" type="stmt" count="10"/>
+        <line num="54" type="stmt" count="10"/>
+        <line num="55" type="stmt" count="10"/>
+        <line num="56" type="stmt" count="10"/>
+        <line num="57" type="stmt" count="10"/>
+        <line num="58" type="stmt" count="10"/>
+        <line num="66" type="method" name="listFilters" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="68" type="stmt" count="10"/>
+        <line num="70" type="stmt" count="10"/>
+        <line num="71" type="stmt" count="10"/>
+        <line num="72" type="stmt" count="10"/>
+        <line num="73" type="stmt" count="10"/>
+        <line num="74" type="stmt" count="10"/>
+        <line num="75" type="stmt" count="10"/>
+        <line num="76" type="stmt" count="10"/>
+        <line num="77" type="stmt" count="10"/>
+        <metrics loc="80" ncloc="57" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="25" coveredelements="25"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/BaseRequest.php">
+        <class name="App\Http\Requests\BaseRequest" namespace="App\Http\Requests">
+          <metrics complexity="14" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="38" coveredelements="38"/>
+        </class>
+        <line num="51" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="53" type="stmt" count="20"/>
+        <line num="61" type="method" name="validationData" visibility="public" complexity="2" crap="2" count="21"/>
+        <line num="63" type="stmt" count="21"/>
+        <line num="65" type="stmt" count="21"/>
+        <line num="66" type="stmt" count="18"/>
+        <line num="67" type="stmt" count="2"/>
+        <line num="69" type="stmt" count="21"/>
+        <line num="71" type="stmt" count="21"/>
+        <line num="82" type="method" name="moduleCommonRules" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="96" type="method" name="mergeCommonRules" visibility="protected" complexity="4" crap="4" count="22"/>
+        <line num="98" type="stmt" count="22"/>
+        <line num="100" type="stmt" count="22"/>
+        <line num="102" type="stmt" count="22"/>
+        <line num="103" type="stmt" count="22"/>
+        <line num="104" type="stmt" count="1"/>
+        <line num="107" type="stmt" count="22"/>
+        <line num="109" type="stmt" count="21"/>
+        <line num="111" type="stmt" count="21"/>
+        <line num="112" type="stmt" count="20"/>
+        <line num="114" type="stmt" count="1"/>
+        <line num="118" type="stmt" count="21"/>
+        <line num="126" type="method" name="assertPresenceOnlyRules" visibility="private" complexity="4" crap="4" count="22"/>
+        <line num="128" type="stmt" count="22"/>
+        <line num="130" type="stmt" count="22"/>
+        <line num="131" type="stmt" count="22"/>
+        <line num="132" type="stmt" count="1"/>
+        <line num="133" type="stmt" count="1"/>
+        <line num="134" type="stmt" count="1"/>
+        <line num="135" type="stmt" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="138" type="stmt" count="1"/>
+        <line num="146" type="method" name="existsCommonRules" visibility="private" complexity="1" crap="1" count="21"/>
+        <line num="148" type="stmt" count="21"/>
+        <line num="156" type="method" name="findCommonRules" visibility="private" complexity="1" crap="1" count="20"/>
+        <line num="158" type="stmt" count="20"/>
+        <metrics loc="161" ncloc="116" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="38" coveredelements="38"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Common">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Common/AttendanceRules.php">
+        <class name="App\Http\Requests\Common\AttendanceRules" namespace="App\Http\Requests\Common">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
+        </class>
+        <line num="15" type="method" name="definitions" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Common/ListRules.php">
+        <class name="App\Http\Requests\Common\ListRules" namespace="App\Http\Requests\Common">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        </class>
+        <line num="15" type="method" name="definitions" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="17" type="stmt" count="11"/>
+        <line num="18" type="stmt" count="11"/>
+        <line num="19" type="stmt" count="11"/>
+        <line num="20" type="stmt" count="11"/>
+        <line num="21" type="stmt" count="11"/>
+        <line num="22" type="stmt" count="11"/>
+        <line num="23" type="stmt" count="11"/>
+        <metrics loc="26" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Common/PeriodRules.php">
+        <class name="App\Http\Requests\Common\PeriodRules" namespace="App\Http\Requests\Common">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="13" coveredelements="13"/>
+        </class>
+        <line num="16" type="method" name="definitions" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <metrics loc="33" ncloc="27" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="13" coveredelements="13"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Common/SubjectRules.php">
+        <class name="App\Http\Requests\Common\SubjectRules" namespace="App\Http\Requests\Common">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="12" coveredelements="12"/>
+        </class>
+        <line num="16" type="method" name="definitions" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <metrics loc="32" ncloc="26" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="12" coveredelements="12"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Requests/Common/UserRules.php">
+        <class name="App\Http\Requests\Common\UserRules" namespace="App\Http\Requests\Common">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="18" coveredelements="18"/>
+        </class>
+        <line num="16" type="method" name="definitions" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="18" type="stmt" count="9"/>
+        <line num="19" type="stmt" count="9"/>
+        <line num="20" type="stmt" count="7"/>
+        <line num="22" type="stmt" count="9"/>
+        <line num="23" type="stmt" count="9"/>
+        <line num="24" type="stmt" count="9"/>
+        <line num="25" type="stmt" count="9"/>
+        <line num="26" type="stmt" count="9"/>
+        <line num="27" type="stmt" count="9"/>
+        <line num="28" type="stmt" count="9"/>
+        <line num="29" type="stmt" count="9"/>
+        <line num="30" type="stmt" count="9"/>
+        <line num="31" type="stmt" count="9"/>
+        <line num="32" type="stmt" count="9"/>
+        <line num="33" type="stmt" count="9"/>
+        <line num="34" type="stmt" count="9"/>
+        <line num="35" type="stmt" count="9"/>
+        <metrics loc="38" ncloc="32" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="18" coveredelements="18"/>
+      </file>
+    </package>
+    <package name="App\Http\Resources\Api\V1\Periods">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Resources/Api/V1/Periods/PeriodResource.php">
+        <class name="App\Http\Resources\Api\V1\Periods\PeriodResource" namespace="App\Http\Resources\Api\V1\Periods">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+        </class>
+        <line num="18" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <metrics loc="30" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Resources/Api/V1/Periods/PeriodResourceForList.php">
+        <class name="App\Http\Resources\Api\V1\Periods\PeriodResourceForList" namespace="App\Http\Resources\Api\V1\Periods">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        </class>
+        <line num="18" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <metrics loc="29" ncloc="23" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      </file>
+    </package>
+    <package name="App\Http\Resources\Api\V1\Subjects">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Resources/Api/V1/Subjects/SubjectResource.php">
+        <class name="App\Http\Resources\Api\V1\Subjects\SubjectResource" namespace="App\Http\Resources\Api\V1\Subjects">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+        </class>
+        <line num="17" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <metrics loc="29" ncloc="23" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Resources/Api/V1/Subjects/SubjectResourceForList.php">
+        <class name="App\Http\Resources\Api\V1\Subjects\SubjectResourceForList" namespace="App\Http\Resources\Api\V1\Subjects">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        </class>
+        <line num="17" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <metrics loc="28" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      </file>
+    </package>
+    <package name="App\Http\Resources\Api\V1\Users">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Resources/Api/V1/Users/UserResource.php">
+        <class name="App\Http\Resources\Api\V1\Users\UserResource" namespace="App\Http\Resources\Api\V1\Users">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+        </class>
+        <line num="17" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <metrics loc="29" ncloc="23" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Resources/Api/V1/Users/UserResourceForList.php">
+        <class name="App\Http\Resources\Api\V1\Users\UserResourceForList" namespace="App\Http\Resources\Api\V1\Users">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        </class>
+        <line num="17" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <metrics loc="28" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      </file>
+    </package>
+    <package name="App\Http\Response">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Http/Response/ApiResponse.php">
+        <class name="App\Http\Response\ApiResponse" namespace="App\Http\Response">
+          <metrics complexity="7" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="22" coveredelements="22"/>
+        </class>
+        <line num="14" type="method" name="success" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="16" type="stmt" count="12"/>
+        <line num="17" type="stmt" count="12"/>
+        <line num="18" type="stmt" count="12"/>
+        <line num="19" type="stmt" count="12"/>
+        <line num="20" type="stmt" count="12"/>
+        <line num="28" type="method" name="error" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="40" type="method" name="created" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="42" type="stmt" count="5"/>
+        <line num="48" type="method" name="notFound" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="56" type="method" name="forbidden" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="64" type="method" name="unauthorized" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="74" type="method" name="validationError" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <metrics loc="79" ncloc="52" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="22" coveredelements="22"/>
+      </file>
+    </package>
+    <package name="App\Models">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Models/Attendance.php">
+        <class name="App\Models\Attendance" namespace="App\Models">
+          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="11" coveredelements="11"/>
+        </class>
+        <line num="23" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="31" type="method" name="student" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="36" type="method" name="attendanceSession" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="41" type="method" name="courseSection" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <metrics loc="46" ncloc="46" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="11" coveredelements="11"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Models/AttendanceSession.php">
+        <class name="App\Models\AttendanceSession" namespace="App\Models">
+          <metrics complexity="8" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="21" coveredelements="21"/>
+        </class>
+        <line num="28" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="4"/>
+        <line num="30" type="stmt" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="32" type="stmt" count="4"/>
+        <line num="33" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="39" type="method" name="courseSection" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="44" type="method" name="period" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="49" type="method" name="openedBy" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="54" type="method" name="attendances" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="59" type="method" name="isOpen" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="65" type="method" name="isQrExpired" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <metrics loc="70" ncloc="70" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="21" coveredelements="21"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Models/CourseSection.php">
+        <class name="App\Models\CourseSection" namespace="App\Models">
+          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="8" coveredelements="8"/>
+        </class>
+        <line num="22" type="method" name="subject" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="27" type="method" name="lecturer" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="32" type="method" name="enrollments" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="37" type="method" name="attendanceSessions" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <metrics loc="42" ncloc="42" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Models/Enrollment.php">
+        <class name="App\Models\Enrollment" namespace="App\Models">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="15" type="method" name="student" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="20" type="method" name="courseSection" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <metrics loc="25" ncloc="25" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Models/Period.php">
+        <class name="App\Models\Period" namespace="App\Models">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="20" type="method" name="attendanceSessions" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <metrics loc="25" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Models/Subject.php">
+        <class name="App\Models\Subject" namespace="App\Models">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+        </class>
+        <line num="20" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="14"/>
+        <line num="22" type="stmt" count="14"/>
+        <line num="23" type="stmt" count="14"/>
+        <line num="24" type="stmt" count="14"/>
+        <line num="27" type="method" name="courseSections" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <metrics loc="32" ncloc="32" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Models/User.php">
+        <class name="App\Models\User" namespace="App\Models">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="14" coveredelements="14"/>
+        </class>
+        <line num="21" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="47"/>
+        <line num="23" type="stmt" count="47"/>
+        <line num="24" type="stmt" count="47"/>
+        <line num="25" type="stmt" count="47"/>
+        <line num="26" type="stmt" count="47"/>
+        <line num="27" type="stmt" count="47"/>
+        <line num="30" type="method" name="attendances" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="35" type="method" name="isStudent" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="40" type="method" name="isLecturer" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="42" type="stmt" count="3"/>
+        <line num="45" type="method" name="isAdmin" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <metrics loc="50" ncloc="49" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="14" coveredelements="14"/>
+      </file>
+    </package>
+    <package name="App\Providers">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Providers/AppServiceProvider.php">
+        <class name="App\Providers\AppServiceProvider" namespace="App\Providers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="9" type="method" name="register" visibility="public" complexity="1" crap="1" count="86"/>
+        <line num="12" type="stmt" count="86"/>
+        <line num="14" type="method" name="boot" visibility="public" complexity="1" crap="1" count="86"/>
+        <line num="17" type="stmt" count="86"/>
+        <metrics loc="19" ncloc="17" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="App\Repositories">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Repositories/CourseSectionRepository.php">
+        <class name="App\Repositories\CourseSectionRepository" namespace="App\Repositories">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="14" type="method" name="findCourseSection" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="24" type="method" name="insertCourseSection" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <metrics loc="29" ncloc="19" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Repositories/EnrollmentRepository.php">
+        <class name="App\Repositories\EnrollmentRepository" namespace="App\Repositories">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="15" type="method" name="existsEnrollment" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="28" type="method" name="insertEnrollment" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <metrics loc="33" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Repositories/PeriodRepository.php">
+        <class name="App\Repositories\PeriodRepository" namespace="App\Repositories">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="25" coveredelements="25"/>
+        </class>
+        <line num="14" type="method" name="findPeriod" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="24" type="method" name="listPeriods" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="34" type="method" name="searchPeriods" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="41" type="stmt" count="3"/>
+        <line num="42" type="stmt" count="3"/>
+        <line num="43" type="stmt" count="3"/>
+        <line num="44" type="stmt" count="3"/>
+        <line num="45" type="stmt" count="3"/>
+        <line num="46" type="stmt" count="3"/>
+        <line num="47" type="stmt" count="3"/>
+        <line num="48" type="stmt" count="3"/>
+        <line num="56" type="method" name="insertPeriod" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="58" type="stmt" count="3"/>
+        <line num="66" type="method" name="updatePeriod" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="68" type="stmt" count="3"/>
+        <line num="69" type="stmt" count="3"/>
+        <line num="71" type="stmt" count="3"/>
+        <line num="77" type="method" name="deletePeriod" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="79" type="stmt" count="3"/>
+        <metrics loc="82" ncloc="56" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="25" coveredelements="25"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Repositories/SubjectRepository.php">
+        <class name="App\Repositories\SubjectRepository" namespace="App\Repositories">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="23" coveredelements="23"/>
+        </class>
+        <line num="13" type="method" name="findSubject" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="23" type="method" name="searchSubjects" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="45" type="method" name="insertSubject" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="55" type="method" name="updateSubject" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="57" type="stmt" count="3"/>
+        <line num="58" type="stmt" count="3"/>
+        <line num="60" type="stmt" count="3"/>
+        <line num="66" type="method" name="deleteSubject" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="68" type="stmt" count="3"/>
+        <metrics loc="71" ncloc="50" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="23" coveredelements="23"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Repositories/UserRepository.php">
+        <class name="App\Repositories\UserRepository" namespace="App\Repositories">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="32" coveredelements="32"/>
+        </class>
+        <line num="16" type="method" name="findUser" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="24" type="method" name="findUserByEmailOrCode" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="39" type="method" name="searchUsersByRole" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="41" type="stmt" count="6"/>
+        <line num="42" type="stmt" count="6"/>
+        <line num="43" type="stmt" count="6"/>
+        <line num="45" type="stmt" count="6"/>
+        <line num="46" type="stmt" count="6"/>
+        <line num="47" type="stmt" count="6"/>
+        <line num="48" type="stmt" count="3"/>
+        <line num="49" type="stmt" count="3"/>
+        <line num="50" type="stmt" count="3"/>
+        <line num="51" type="stmt" count="3"/>
+        <line num="52" type="stmt" count="3"/>
+        <line num="53" type="stmt" count="6"/>
+        <line num="54" type="stmt" count="6"/>
+        <line num="55" type="stmt" count="6"/>
+        <line num="63" type="method" name="insertUser" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="65" type="stmt" count="4"/>
+        <line num="73" type="method" name="updateUser" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="75" type="stmt" count="4"/>
+        <line num="76" type="stmt" count="4"/>
+        <line num="78" type="stmt" count="4"/>
+        <line num="84" type="method" name="deleteUser" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="86" type="stmt" count="4"/>
+        <metrics loc="89" ncloc="63" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="32" coveredelements="32"/>
+      </file>
+    </package>
+    <package name="App\Services">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Services/MasterUserService.php">
+        <class name="App\Services\MasterUserService" namespace="App\Services">
+          <metrics complexity="8" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="31" coveredelements="31"/>
+        </class>
+        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="15"/>
+        <line num="15" type="stmt" count="15"/>
+        <line num="22" type="method" name="fetchUserList" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="32" type="method" name="createUser" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="39" type="stmt" count="3"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="48" type="method" name="updateUser" visibility="public" complexity="3" crap="3" count="4"/>
+        <line num="50" type="stmt" count="4"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="3"/>
+        <line num="57" type="stmt" count="3"/>
+        <line num="58" type="stmt" count="3"/>
+        <line num="59" type="stmt" count="3"/>
+        <line num="60" type="stmt" count="3"/>
+        <line num="62" type="stmt" count="3"/>
+        <line num="63" type="stmt" count="3"/>
+        <line num="66" type="stmt" count="3"/>
+        <line num="72" type="method" name="deleteUser" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="74" type="stmt" count="4"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="3"/>
+        <metrics loc="83" ncloc="65" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="31" coveredelements="31"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Services/PeriodService.php">
+        <class name="App\Services\PeriodService" namespace="App\Services">
+          <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="22" coveredelements="22"/>
+        </class>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="14" type="stmt" count="4"/>
+        <line num="21" type="method" name="fetchPeriodList" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="31" type="method" name="listAllPeriods" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="41" type="method" name="createPeriod" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="56" type="method" name="updatePeriod" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="69" type="method" name="deletePeriod" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <metrics loc="74" ncloc="51" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="22" coveredelements="22"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Services/PublicUrlService.php">
+        <class name="App\Services\PublicUrlService" namespace="App\Services">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="10" type="method" name="baseUrl" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="12" type="stmt" count="2"/>
+        <line num="14" type="stmt" count="2"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="24" type="method" name="checkInUrl" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <metrics loc="29" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Services/SubjectService.php">
+        <class name="App\Services\SubjectService" namespace="App\Services">
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="20" coveredelements="20"/>
+        </class>
+        <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="13" type="stmt" count="6"/>
+        <line num="20" type="method" name="fetchSubjectList" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="30" type="method" name="createSubject" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="45" type="method" name="updateSubject" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="58" type="method" name="deleteSubject" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <metrics loc="63" ncloc="45" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="20" coveredelements="20"/>
+      </file>
+    </package>
+    <package name="App\Support">
+      <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Support/PaginationMeta.php">
+        <class name="App\Support\PaginationMeta" namespace="App\Support">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+        </class>
+        <line num="12" type="method" name="from" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="14" type="stmt" count="8"/>
+        <line num="15" type="stmt" count="8"/>
+        <line num="16" type="stmt" count="8"/>
+        <line num="17" type="stmt" count="8"/>
+        <line num="18" type="stmt" count="8"/>
+        <line num="19" type="stmt" count="8"/>
+        <line num="20" type="stmt" count="8"/>
+        <line num="21" type="stmt" count="8"/>
+        <metrics loc="24" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+      </file>
+    </package>
+    <metrics files="57" loc="2572" ncloc="2025" classes="55" methods="156" coveredmethods="156" conditionals="0" coveredconditionals="0" statements="574" coveredstatements="574" elements="730" coveredelements="730"/>
+  </project>
+</coverage>

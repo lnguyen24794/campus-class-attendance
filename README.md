@@ -72,19 +72,25 @@ Tham chiếu: [Khoa CNTT DUT](https://dut.udn.vn/KhoaCNTT/Gioithieu)
 |-------------|----------|
 | `/dashboard` | `GET /api/v1/admin/dashboard` |
 | `/students` … `/periods` | CRUD `/api/v1/admin/*` |
-| `/sessions/*` | mở buổi + live QR + Reverb |
-| `/check-in/{token}` | public check-in |
 
-## Endpoint API nghiệp vụ (UC)
+> **UC01 / UC02 đã gỡ code** để demo recreate. Spec: `docs/use-cases/` + rule `.cursor/rules/cca-qr-attendance.mdc`.
 
-| Phương thức | Đường dẫn | Vai trò |
-|-------------|-----------|---------|
-| GET | `/api/v1/students/attendances` | sinh viên |
-| POST | `/api/v1/students/attendances/check-in` | sinh viên |
-| POST | `/api/v1/lecturers/attendance-sessions` | giảng viên |
+## Test & coverage (100%)
+
+```bash
+composer test
+composer coverage          # cần PCOV/Xdebug → ghi docs/coverage/
+composer coverage:open     # sinh report + mở HTML (macOS)
+```
+
+**Xem HTML:** [http://localhost:8000/coverage](http://localhost:8000/coverage)  
+(chạy app trước; sinh report bằng `composer coverage`)
+
+Chi tiết: [`docs/coverage/README.md`](docs/coverage/README.md) · hướng dẫn PCOV: [Laravel News](https://laravel-news.com/generate-code-coverage-in-laravel-with-pcov)
 
 ## Tài liệu
 
-- `../campus-class-attendance.wiki/` — wiki hướng dẫn đầy đủ
-- `docs/use-cases/` — UC01, UC02
+- `docs/use-cases/` — UC01, UC02 (blueprint recreate)
+- `docs/use-cases/README.md` — prompt gợi ý khi demo
 - `docs/architecture-rules.md` — quy ước kiến trúc
+- Wiki (nếu clone kèm): `campus-class-attendance.wiki/`
