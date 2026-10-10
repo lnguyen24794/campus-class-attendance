@@ -66,12 +66,12 @@ composer coverage
 | `docs/coverage/SUMMARY.md` | Tóm tắt % (agent cập nhật mỗi prompt khi đụng code/test) |
 | `docs/coverage/coverage.txt` | Báo cáo text PHPUnit |
 | `docs/coverage/clover.xml` | Clover XML |
-| `docs/coverage/html/` | HTML local (gitignored) |
+| `public/coverage/` | HTML static (gitignored) — sinh bằng `artisan test --coverage` |
 
 **Xem HTML:** [http://localhost:8000/coverage](http://localhost:8000/coverage) · `composer coverage:open`  
-Hướng dẫn: [Generate Code Coverage in Laravel With PCOV](https://laravel-news.com/generate-code-coverage-in-laravel-with-pcov)
+Laravel: [Reporting Test Coverage](https://laravel.com/framework/docs/testing#reporting-test-coverage) (`php artisan test --coverage --min=100`)
 
-Cần **pcov** hoặc **xdebug**. macOS: `brew install shivammathur/extensions/pcov@8.4`. Hoặc đặt `pcov.so` tại `.php/pcov.so` (gitignored).
+Cần **pcov** hoặc **xdebug**. macOS: `brew install shivammathur/extensions/pcov@8.4`. Hoặc `.php/pcov.so` (gitignored).
 
 Cursor rule: `.cursor/rules/cca-test-coverage.mdc` (**alwaysApply**) — mỗi prompt đụng `app/`|`tests/` phải chạy lại coverage và cập nhật file report.
 

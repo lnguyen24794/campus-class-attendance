@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1791607630">
-  <project timestamp="1791607630" name="Clover Coverage">
+<coverage generated="1791607986">
+  <project timestamp="1791607986" name="Clover Coverage">
     <package name="App\Enums">
       <file name="/Users/user/GitHub/Seminar/campus-class-attendance/app/Enums/AttendanceStatus.php">
         <class name="App\Enums\AttendanceStatus" namespace="App\Enums">

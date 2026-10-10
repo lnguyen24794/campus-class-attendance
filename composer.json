@@ -62,7 +62,7 @@
         ],
         "coverage:open": [
             "@coverage",
-            "@php -r \"\\$f=getcwd().'/docs/coverage/html/index.html'; if (!is_file(\\$f)) { fwrite(STDERR, 'Missing HTML report'.PHP_EOL); exit(1);} echo 'Open: http://localhost:8000/coverage'.PHP_EOL; if (PHP_OS_FAMILY==='Darwin') { passthru('open '.escapeshellarg(\\$f)); }\""
+            "@php -r \"\\$f=getcwd().'/public/coverage/index.html'; if (!is_file(\\$f)) { fwrite(STDERR, 'Missing HTML report'.PHP_EOL); exit(1);} echo 'Open: http://localhost:8000/coverage'.PHP_EOL; if (PHP_OS_FAMILY==='Darwin') { passthru('open '.escapeshellarg('http://localhost:8000/coverage')); }\""
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

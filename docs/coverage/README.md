@@ -1,30 +1,32 @@
 # Code coverage (CCA)
 
-**Yêu cầu:** lines + methods trên `app/` = **100%**.
+**Yêu cầu:** lines + methods trên `app/` = **100%** (`--min=100`).
 
-## Xem báo cáo HTML (trình duyệt)
+Laravel built-in: [Reporting Test Coverage](https://laravel.com/framework/docs/testing#reporting-test-coverage) (`php artisan test --coverage`).
 
-1. Cài [PCOV](https://github.com/krakjoe/pcov) (hoặc Xdebug) — macOS: `brew install shivammathur/extensions/pcov@8.4` (đổi đúng phiên bản PHP).
-2. Sinh report:
+## Xem báo cáo HTML
+
+1. Cài [PCOV](https://pecl.php.net/package/pcov) hoặc Xdebug.
+2. Sinh report (HTML ghi vào `public/coverage/` — static):
 
 ```bash
 composer coverage
+# tương đương: php artisan test --coverage --min=100 --coverage-html=public/coverage
 ```
 
-3. Mở link (app đang chạy `php artisan serve` / Docker cổng 8000):
+3. Mở:
 
 **→ [http://localhost:8000/coverage](http://localhost:8000/coverage)**
 
-Hoặc mở file trực tiếp: `docs/coverage/html/index.html`  
-(`composer coverage:open` trên macOS).
+Report HTML nằm ở `public/coverage/` (sinh bởi `--coverage-html`). Route local inject `<base href="/coverage/">` để **click folder/file** (`Enums/`, `_css/`, …) hoạt động đúng.
 
-Hướng dẫn PCOV + HTML report: [Generate Code Coverage in Laravel With PCOV (Laravel News)](https://laravel-news.com/generate-code-coverage-in-laravel-with-pcov).
+CLI Laravel tương đương: `php artisan test --coverage --min=100` — xem [Reporting Test Coverage](https://laravel.com/framework/docs/testing#reporting-test-coverage).
 
 ## File trong repo
 
 | File | Mô tả |
 |------|--------|
-| [SUMMARY.md](SUMMARY.md) | Tóm tắt % (agent cập nhật mỗi prompt) |
-| [coverage.txt](coverage.txt) | Báo cáo text PHPUnit |
+| [SUMMARY.md](SUMMARY.md) | Tóm tắt % |
+| [coverage.txt](coverage.txt) | Text PHPUnit |
 | [clover.xml](clover.xml) | Clover (CI) |
-| `html/` | HTML chi tiết — **gitignored**, sinh bằng `composer coverage` |
+| `public/coverage/` | HTML — **gitignored**, sinh bằng `composer coverage` |

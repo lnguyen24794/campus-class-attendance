@@ -84,9 +84,9 @@ composer coverage:open     # sinh report + mở HTML (macOS)
 ```
 
 **Xem HTML:** [http://localhost:8000/coverage](http://localhost:8000/coverage)  
-(chạy app trước; sinh report bằng `composer coverage`)
+(`composer coverage` → `public/coverage/` + `php artisan test --coverage --min=100`)
 
-Chi tiết: [`docs/coverage/README.md`](docs/coverage/README.md) · hướng dẫn PCOV: [Laravel News](https://laravel-news.com/generate-code-coverage-in-laravel-with-pcov)
+Chi tiết: [`docs/coverage/README.md`](docs/coverage/README.md) · Laravel: [Reporting Test Coverage](https://laravel.com/framework/docs/testing#reporting-test-coverage)
 
 ## Tài liệu
 

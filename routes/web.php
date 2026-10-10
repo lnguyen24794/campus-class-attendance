@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Web\AuthController;
 use App\Http\Controllers\Web\DashboardController;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
@@ -27,23 +28,47 @@ Route::middleware(['auth', 'role:admin,lecturer'])->group(function () {
 });
 
 /*
-| HTML coverage report (PCOV) — local/testing only.
-| Generate first: composer coverage
-| Open: http://localhost:8000/coverage
-| Guide: https://laravel-news.com/generate-code-coverage-in-laravel-with-pcov
+| Coverage HTML from: php artisan test --coverage --coverage-html=public/coverage
+| https://laravel.com/framework/docs/testing#reporting-test-coverage
+|
+| Inject <base href="/coverage/"> into HTML so folder/file links work even without a trailing slash.
 */
 if (app()->environment(['local', 'testing'])) {
-    Route::get('/coverage/{path?}', function (?string $path = null): BinaryFileResponse {
-        $root = realpath(base_path('docs/coverage/html'));
+    Route::get('/coverage/{path?}', function (?string $path = null): BinaryFileResponse|Response {
+        $root = realpath(public_path('coverage'));
         abort_unless($root !== false && is_dir($root), 404, 'Run `composer coverage` first.');
 
-        $relative = $path === null || $path === '' ? 'index.html' : $path;
-        $target = realpath($root.DIRECTORY_SEPARATOR.str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $relative));
+        $relative = ($path === null || $path === '') ? 'index.html' : $path;
+        $candidate = $root.DIRECTORY_SEPARATOR.str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $relative);
+
+        if (is_dir($candidate)) {
+            $candidate = rtrim($candidate, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.'index.html';
+        }
+
+        $target = realpath($candidate);
+        $rootPrefix = $root.DIRECTORY_SEPARATOR;
 
         abort_unless(
-            $target !== false && str_starts_with($target, $root) && is_file($target),
+            $target !== false && str_starts_with($target, $rootPrefix) && is_file($target),
             404,
         );
+
+        // HTML: force base URL so relative links (Enums/index.html, _css/...) resolve under /coverage/
+        if (str_ends_with(strtolower($target), '.html')) {
+            $html = file_get_contents($target);
+            abort_unless($html !== false, 404);
+
+            if (! str_contains($html, '<base ')) {
+                $html = preg_replace(
+                    '/<head([^>]*)>/i',
+                    '<head$1><base href="'.e(url('/coverage/')).'">',
+                    $html,
+                    1,
+                ) ?? $html;
+            }
+
+            return response($html, 200)->header('Content-Type', 'text/html; charset=UTF-8');
+        }
 
         return response()->file($target);
     })->where('path', '.*')->name('coverage.report');

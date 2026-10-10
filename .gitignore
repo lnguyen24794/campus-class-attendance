@@ -6,6 +6,7 @@
 .phpactor.json
 .phpunit.result.cache
 /.php/
+/public/coverage/
 /docs/coverage/html/
 /.codex
 /.cursor/

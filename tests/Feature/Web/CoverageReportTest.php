@@ -8,28 +8,38 @@ use Tests\TestCase;
 
 class CoverageReportTest extends TestCase
 {
-    public function test_local_coverage_html_is_served_when_report_exists(): void
+    public function test_coverage_index_injects_base_href_for_relative_links(): void
     {
-        $dir = base_path('docs/coverage/html');
+        $dir = public_path('coverage');
         File::ensureDirectoryExists($dir);
-        File::put($dir.'/index.html', '<html><body>coverage-ok</body></html>');
+        File::put($dir.'/index.html', '<!DOCTYPE html><html><head><title>c</title></head><body>coverage-root-ok</body></html>');
 
-        $response = $this->get('/coverage');
-
-        $response->assertOk();
-        $this->assertInstanceOf(BinaryFileResponse::class, $response->baseResponse);
-        $this->assertSame(
-            realpath($dir.'/index.html'),
-            $response->baseResponse->getFile()->getPathname(),
-        );
+        $this->get('/coverage')
+            ->assertOk()
+            ->assertSee('coverage-root-ok', false)
+            ->assertSee('<base href="'.url('/coverage/').'">', false);
     }
 
-    public function test_coverage_rejects_path_traversal(): void
+    public function test_coverage_serves_folder_pages_and_assets(): void
     {
-        $dir = base_path('docs/coverage/html');
-        File::ensureDirectoryExists($dir);
-        File::put($dir.'/index.html', '<html></html>');
+        $dir = public_path('coverage');
+        File::ensureDirectoryExists($dir.'/Enums');
+        File::put($dir.'/Enums/index.html', '<!DOCTYPE html><html><head></head><body>enums-folder-ok</body></html>');
+        File::ensureDirectoryExists($dir.'/_css');
+        File::put($dir.'/_css/style.css', 'body{}');
 
-        $this->get('/coverage/'.urlencode('../README.md'))->assertNotFound();
+        $this->get('/coverage/Enums/index.html')
+            ->assertOk()
+            ->assertSee('enums-folder-ok', false)
+            ->assertSee('<base href="'.url('/coverage/').'">', false);
+
+        // Directory URL → index.html
+        $this->get('/coverage/Enums')
+            ->assertOk()
+            ->assertSee('enums-folder-ok', false);
+
+        $asset = $this->get('/coverage/_css/style.css');
+        $asset->assertOk();
+        $this->assertInstanceOf(BinaryFileResponse::class, $asset->baseResponse);
     }
 }

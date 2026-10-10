@@ -1,40 +1,44 @@
 #!/usr/bin/env bash
-# Generate PHPUnit coverage for app/ and write human + machine reports.
-# Requires pcov (preferred) or xdebug.
+# Laravel coverage via Artisan (--coverage --min=100) + HTML in public/coverage.
+# https://laravel.com/framework/docs/testing#reporting-test-coverage
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 OUT_DIR="${COVERAGE_DIR:-docs/coverage}"
+HTML_DIR="${COVERAGE_HTML_DIR:-$ROOT/public/coverage}"
 mkdir -p "$OUT_DIR"
 
 PCOV_SO="${PCOV_SO:-$ROOT/.php/pcov.so}"
 PHP_BIN=(php)
+
 if php -m 2>/dev/null | grep -qi '^pcov$'; then
   :
 elif [[ -f "$PCOV_SO" ]]; then
-  PHP_BIN=(php -n -d "extension=$PCOV_SO" -d "pcov.enabled=1")
+  PHP_BIN=(php -d "extension=$PCOV_SO" -d "pcov.enabled=1")
 elif php -m 2>/dev/null | grep -qi '^xdebug$'; then
   export XDEBUG_MODE=coverage
 else
-  echo "ERROR: Need pcov or xdebug. Build pcov into .php/pcov.so or enable the extension." >&2
+  echo "ERROR: Need PCOV or Xdebug." >&2
+  echo "See https://laravel.com/framework/docs/testing#reporting-test-coverage" >&2
   exit 1
 fi
 
 CLOVER="$OUT_DIR/clover.xml"
-HTML_DIR="$OUT_DIR/html"
 TEXT="$OUT_DIR/coverage.txt"
 
+# Prefer vendor/bin/phpunit for reliable coverage drivers; same flags as artisan test --coverage.
 "${PHP_BIN[@]}" vendor/bin/phpunit \
   --coverage-clover="$CLOVER" \
   --coverage-html="$HTML_DIR" \
   --coverage-text="$TEXT" \
   --colors=never
 
-# Enforce 100% lines + methods on included source (app/)
+# Enforce Laravel-style minimum threshold (100%)
 "${PHP_BIN[@]}" -r '
 $clover = $argv[1];
+$htmlDir = $argv[2];
 $xml = simplexml_load_file($clover);
 if ($xml === false) {
     fwrite(STDERR, "Cannot read clover: {$clover}\n");
@@ -48,32 +52,33 @@ $coveredMethods = (int) $metrics["coveredmethods"];
 $pct = $statements > 0 ? round(100 * $covered / $statements, 2) : 100;
 $methodPct = $methods > 0 ? round(100 * $coveredMethods / $methods, 2) : 100;
 
-$summary = sprintf(
+printf(
     "CCA coverage: lines %d/%d (%.2f%%) · methods %d/%d (%.2f%%)\n",
-    $covered,
-    $statements,
-    $pct,
-    $coveredMethods,
-    $methods,
-    $methodPct,
+    $covered, $statements, $pct, $coveredMethods, $methods, $methodPct,
 );
-echo $summary;
+
 file_put_contents(
     dirname($clover) . "/SUMMARY.md",
     "# Coverage summary\n\n"
     . "Generated: " . gmdate("c") . "\n\n"
     . "- Lines: **{$covered}/{$statements}** ({$pct}%)\n"
     . "- Methods: **{$coveredMethods}/{$methods}** ({$methodPct}%)\n"
-    . "- **View HTML:** [http://localhost:8000/coverage](http://localhost:8000/coverage) (sau `composer coverage` + chạy app)\n"
+    . "- **View HTML:** [http://localhost:8000/coverage](http://localhost:8000/coverage)\n"
     . "- Clover: `docs/coverage/clover.xml`\n"
     . "- Text: `docs/coverage/coverage.txt`\n"
-    . "- HTML file: `docs/coverage/html/index.html`\n"
-    . "- Guide: [Laravel News — PCOV coverage](https://laravel-news.com/generate-code-coverage-in-laravel-with-pcov)\n",
+    . "- HTML: `public/coverage/` (gitignored)\n"
+    . "- Laravel: [Reporting Test Coverage](https://laravel.com/framework/docs/testing#reporting-test-coverage)\n"
+    . "- Equivalent CLI: `php artisan test --coverage --min=100`\n",
 );
 
 if ($pct < 100.0 || $methodPct < 100.0) {
-    fwrite(STDERR, "FAIL: coverage must be 100% lines and methods.\n");
+    fwrite(STDERR, "FAIL: coverage must be 100% (same as artisan test --coverage --min=100).\n");
     exit(2);
 }
-echo "OK: 100% coverage.\n";
-' "$CLOVER"
+if (! is_file($htmlDir . "/index.html")) {
+    fwrite(STDERR, "FAIL: missing public/coverage/index.html\n");
+    exit(2);
+}
+echo "OK: 100% coverage.\nOpen: http://localhost:8000/coverage\n";
+echo "CLI equiv: php artisan test --coverage --min=100\n";
+' "$CLOVER" "$HTML_DIR"
