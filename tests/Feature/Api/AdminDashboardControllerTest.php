@@ -13,7 +13,7 @@ class AdminDashboardControllerTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_dashboard_returns_counts_and_empty_open_sessions(): void
+    public function test_dashboard_returns_counts_and_open_sessions(): void
     {
         $admin = User::factory()->create([
             'role' => UserRole::Admin,

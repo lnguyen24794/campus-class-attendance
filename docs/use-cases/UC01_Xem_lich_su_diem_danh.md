@@ -1,6 +1,6 @@
 # UC01 — Xem lịch sử điểm danh
 
-> **Trạng thái demo:** code triển khai đã **gỡ**. Recreate theo file này + `.cursor/rules/cca-qr-attendance.mdc`.
+> **Trạng thái demo:** đã triển khai. Spec + `.cursor/rules/cca-qr-attendance.mdc`.
 
 **Tác nhân:** Sinh viên (đã đăng nhập)
 

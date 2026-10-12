@@ -2,6 +2,9 @@ import 'flowbite';
 import './echo';
 import { initCrudPage } from './pages/crud-resource';
 import { initDashboardPage } from './pages/dashboard';
+import { initSessionCreatePage, initSessionLivePage } from './pages/sessions';
+import { initSessionsHistoryPage } from './pages/sessions-history';
+import { initCheckInPage } from './pages/check-in';
 
 document.addEventListener('DOMContentLoaded', () => {
     const page = document.body.dataset.page;
@@ -83,5 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // TODO demo UC01/UC02: sessions-history / sessions-create / sessions-live / check-in
+    if (page === 'sessions-history') {
+        initSessionsHistoryPage();
+    }
+
+    if (page === 'sessions-create') {
+        initSessionCreatePage();
+    }
+
+    if (page === 'sessions-live') {
+        initSessionLivePage();
+    }
+
+    if (page === 'check-in') {
+        initCheckInPage();
+    }
 });

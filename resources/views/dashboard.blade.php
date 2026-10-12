@@ -22,7 +22,10 @@
         <section class="ht-card overflow-hidden">
             <div class="flex items-center justify-between border-b border-gray-200 px-4 py-3">
                 <h2 class="text-base font-semibold text-gray-800">Buổi đang mở</h2>
-                <p class="text-xs text-gray-400">UC02 chưa triển khai — recreate từ docs/use-cases</p>
+                <div class="flex items-center gap-2">
+                    <a href="{{ route('sessions.index') }}" class="ht-btn-secondary !py-1.5 text-xs">Lịch sử</a>
+                    <a href="{{ route('sessions.create') }}" class="ht-btn-primary !py-1.5 text-xs">Mở buổi mới</a>
+                </div>
             </div>
             <div class="overflow-x-auto">
                 <table class="ht-table min-w-full">

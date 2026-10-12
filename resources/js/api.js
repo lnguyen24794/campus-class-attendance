@@ -54,7 +54,22 @@ export const adminApi = {
     create: (resource, body) => api(`/admin/${resource}`, { method: 'POST', body }),
     update: (resource, id, body) => api(`/admin/${resource}/${id}`, { method: 'PUT', body }),
     destroy: (resource, id) => api(`/admin/${resource}/${id}`, { method: 'DELETE' }),
-    // TODO demo UC02: sessionOptions, listSessions, createSession, liveSession, refreshQr
+    sessionOptions: () => api('/admin/attendance-sessions/options'),
+    listSessions: (params = {}) => {
+        const query = new URLSearchParams(
+            Object.entries(params).filter(([, v]) => v !== '' && v != null),
+        ).toString();
+        return api(`/admin/attendance-sessions${query ? `?${query}` : ''}`);
+    },
+    createSession: (body) => api('/admin/attendance-sessions', { method: 'POST', body }),
+    liveSession: (id) => api(`/admin/attendance-sessions/${id}/live`),
+    refreshQr: (id) => api(`/admin/attendance-sessions/${id}/refresh-qr`, { method: 'POST' }),
 };
 
-// TODO demo UC02: publicApi checkInMeta / checkIn
+export const publicApi = {
+    checkInMeta: (token) => api(`/public/check-in/${token}`),
+    checkIn: (token, identifier) => api(`/public/check-in/${token}`, {
+        method: 'POST',
+        body: { identifier },
+    }),
+};

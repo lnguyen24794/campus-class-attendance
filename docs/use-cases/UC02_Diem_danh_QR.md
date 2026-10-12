@@ -1,6 +1,6 @@
 # UC02 — Điểm danh bằng mã QR lớp học phần
 
-> **Trạng thái demo:** code triển khai đã **gỡ**. Recreate theo file này + `.cursor/rules/cca-qr-attendance.mdc`.
+> **Trạng thái demo:** đã triển khai. Spec + `.cursor/rules/cca-qr-attendance.mdc`.
 
 **Tác nhân:** Sinh viên (quét QR) · Giảng viên (mở buổi / phát QR)
 

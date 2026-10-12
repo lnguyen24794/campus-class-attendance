@@ -19,7 +19,8 @@
             ['lecturers.*', 'Quản lý Giảng viên', route('lecturers.index'), 'M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z'],
             ['subjects.*', 'Quản lý Môn học', route('subjects.index'), 'M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z'],
             ['periods.*', 'Quản lý Tiết học', route('periods.index'), 'M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z'],
-            // TODO demo UC01/UC02: Lịch sử điểm danh + Mở buổi điểm danh
+            ['sessions.index,sessions.live', 'Lịch sử điểm danh', route('sessions.index'), 'M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z'],
+            ['sessions.create', 'Mở buổi điểm danh', route('sessions.create'), 'M3 4a1 1 0 00-1 1v10a1 1 0 001 1h14a1 1 0 001-1V5a1 1 0 00-1-1H3zm2 3h10v1H5V7zm0 3h6v1H5v-1z'],
         ];
         $user = auth()->user();
     @endphp

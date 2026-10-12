@@ -23,11 +23,13 @@ class DashboardShellTest extends TestCase
         $this->actingAs($admin)->get('/lecturers')->assertOk()->assertViewIs('master.lecturers.index');
         $this->actingAs($admin)->get('/subjects')->assertOk()->assertViewIs('master.subjects.index');
         $this->actingAs($admin)->get('/periods')->assertOk()->assertViewIs('master.periods.index');
+        $this->actingAs($admin)->get('/sessions')->assertOk()->assertViewIs('sessions.index');
+        $this->actingAs($admin)->get('/sessions/create')->assertOk()->assertViewIs('sessions.create');
     }
 
     public function test_guest_is_redirected_from_master_shells(): void
     {
-        foreach (['/dashboard', '/students', '/lecturers', '/subjects', '/periods'] as $uri) {
+        foreach (['/dashboard', '/students', '/lecturers', '/subjects', '/periods', '/sessions', '/sessions/create'] as $uri) {
             $this->get($uri)->assertRedirect(route('login'));
         }
     }
@@ -38,5 +40,6 @@ class DashboardShellTest extends TestCase
 
         $this->actingAs($student)->get('/dashboard')->assertForbidden();
         $this->actingAs($student)->get('/students')->assertForbidden();
+        $this->actingAs($student)->get('/sessions')->assertForbidden();
     }
 }

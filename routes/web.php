@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Web\AttendanceSessionLiveController;
 use App\Http\Controllers\Web\AuthController;
 use App\Http\Controllers\Web\DashboardController;
+use App\Http\Controllers\Web\PublicCheckInController;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -12,6 +14,8 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'create'])->name('login');
     Route::post('/login', [AuthController::class, 'store'])->name('login.store');
 });
+
+Route::get('/check-in/{qrToken}', [PublicCheckInController::class, 'show'])->name('check-in.show');
 
 Route::middleware(['auth', 'role:admin,lecturer'])->group(function () {
     Route::post('/logout', [AuthController::class, 'destroy'])->name('logout');
@@ -24,7 +28,9 @@ Route::middleware(['auth', 'role:admin,lecturer'])->group(function () {
     Route::view('/subjects', 'master.subjects.index')->name('subjects.index');
     Route::view('/periods', 'master.periods.index')->name('periods.index');
 
-    // TODO demo: UC01/UC02 — /sessions, /sessions/create, /sessions/{id}/live, /check-in/{token}
+    Route::view('/sessions', 'sessions.index')->name('sessions.index');
+    Route::get('/sessions/create', [AttendanceSessionLiveController::class, 'create'])->name('sessions.create');
+    Route::get('/sessions/{session}/live', [AttendanceSessionLiveController::class, 'show'])->name('sessions.live');
 });
 
 /*

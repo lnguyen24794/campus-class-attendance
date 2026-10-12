@@ -1,8 +1,6 @@
 # Use Cases — blueprint demo recreate
 
-**Triển khai UC01 / UC02 đã được gỡ khỏi code** (controllers, routes, services, UI, tests).
-
-Giữ lại để recreate khi demo:
+**UC01 / UC02 đã được triển khai lại** theo spec trong các file dưới đây.
 
 | Giữ | Mục đích |
 |-----|----------|
